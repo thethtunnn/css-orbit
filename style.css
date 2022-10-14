@@ -1,0 +1,85 @@
+.wrap {
+    display: flex;
+    background-image:linear-gradient(180deg, #020205 0%, #170f39 51%, #35247a 95%);
+    width: 1000px;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin: 500px 500px;
+}
+.planet {
+    position: absolute;
+    border: 20px solid #fff;
+    transform-style: preserve-3d;
+    width: 700px;
+    height: 700px;
+    transform: rotateZ(45deg) scaleY(2);
+    transform:scaleY(0.5) rotateZ(45deg);
+    border-radius: 50%;
+    
+
+
+}
+.ball {
+    width: 130px;
+    height:130px;
+    position: absolute;
+   border-radius: 100%;
+    background-color: blue;
+    left: calc(50% - 25px);
+   
+    top: -25px;
+    transform: rotateZ(-45deg) scaleY(2);
+
+
+}
+
+@keyframes planet-rotate {
+    0%{
+        trnsform: scaleY(0.5) rotate(0);
+    }
+    100%{
+        transform: scaleY(0.5) rotate(360deg);
+        
+    }
+}
+
+@keyframes selt-rotate {
+    0%{
+        transform: rotate(90) scaleY(2);
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        
+        
+        
+    }
+    50%{
+        transform:rotate(180) scaleY(2);
+        background-color: yellow;
+        width: 150px;
+        height: 150px;
+       
+
+    }
+    
+    
+    100%{
+        transform: rotate(-360deg) scaleY(2);
+        background-color: green;
+        height: 500px;
+        width: 500px;
+       
+    }
+}
+
+.planet {
+    animation:planet-rotate 5s linear infinite;
+   
+}
+.ball{
+    animation: selt-rotate 5s  linear infinite ;
+    
+   
+}
+
